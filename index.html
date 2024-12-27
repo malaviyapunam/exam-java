@@ -1,0 +1,114 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>mamaearth product</title>
+</head>
+<body>
+    <h1>Product Page</h1>
+    <div class="form-container">
+        <h2>Add a New Product</h2>
+        <form id="product-form">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" required>
+            <label for="image">Image URL:</label>
+            <input type="url" id="image" name="image" required>
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" required>
+            <button type="submit">Add Product</button>
+        </form>
+    </div>
+    <div class="product-list">
+        <h3>Product List</h3>
+        <ul id="product-list">
+           
+    </div>
+</body>
+<script src="exam.js"></script>
+</html> -->
+<!-- JavaScript Practical Exam
+Product Page with CRUD OperationsProject Objective:The objective of this project is to create a product page that allows users to perform CRUD operations (Create, Read, Update, Delete) on a list of products. The project aims to provide hands-on experience in web development with a focus on JavaScript and local storage.
+Project Requirements : ​1. HTML Structure (5 points) :​- Create an HTML file with the necessary structure for the product page.​- Include an input form to add new products and a dynamic list to display existing products. - make input field title, price, image, category
+​2. Adding Products (5 points) :​- Implement a function (`addProduct`) to collect information from users when adding a new ​product.​- Validate that both product name and price are provided before adding a product. - Format the product data and add it to the product list dynamically.
+3. Displaying Products (5 points) :​- Create a function (`addProductToList`) to display products on the page dynamically. - Display each product with its name price, image category
+​4. Local Storage (10 points) :​- Utilize local storage to persist product data even when the page is refreshed.​- Implement functions to load product data from local storage on page load and save data when products are added or modified.
+​5. Editing Products (5 points) :​- Develop a function (`editProduct`) to allow users to edit existing products. - Identify a unique identifier for each product to ensure accurate editing.
+​6. Deleting Products (5 points) :​- Implement a function (`deleteProduct`) to allow users to remove products from the list. - Update the page dynamically when a product is deleted.
+7. Sorting searching and filtering (10 points) :​- Add sorting feature by price with low to high and high to low​- Add searching feature by title​- Add filter feature by category -
+8. User Interaction (5 points) :​- Ensure that input fields are cleared after successfully adding a new product - make good UI -->
+
+ <!-- Create an HTML file with the necessary structure for the product page.​- Include an input form to add new products and a dynamic list to display existing products. - make input field title, price, image, category
+Implement a function (`addProduct`) to collect information from users when adding a new ​product.​- Validate that both product name and price are provided before adding a product. - Format the product data and add it to the product list dynamically.
+ Create a function (`addProductToList`) to display products on the page dynamically. - Display each product with its name price, image category
+ Utilize local storage to persist product data even when the page is refreshed.​- Implement functions to load product data from local storage on page load and save data when products are added or modified
+ Develop a function (`editProduct`) to allow users to edit existing products. - Identify a unique identifier for each product to ensure accurate editing.
+ Implement a function (`deleteProduct`) to allow users to remove products from the list. - Update the page dynamically when a product is deleted.
+ Add sorting feature by price with low to high and high to low​- Add searching feature by title​- Add filter feature by category -
+ Ensure that input fields are cleared after successfully adding a new product - make good UI  -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Product Management</title>
+     <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="style.css">
+
+ </head>
+ <body>
+     <div class="container">
+         <h1 class="page-title">Product Management</h1>
+ 
+         <!-- Product Form -->
+         <div class="form-container">
+             <h2>Add a New Product</h2>
+             <form id="product-form">
+                 <label for="title">Title:</label>
+                 <input type="text" id="title" name="title" required>
+ 
+                 <label for="price">Price:</label>
+                 <input type="number" id="price" name="price" required>
+ 
+                 <label for="image">Image URL:</label>
+                 <input type="url" id="image" name="image" required>
+ 
+                 <label for="category">Category:</label>
+                 <input type="text" id="category" name="category" required>
+ 
+                 <button type="submit">Add Product</button>
+             </form>
+         </div>
+ 
+         <!-- Filters and Sorting -->
+         <div class="filters">
+             <input type="text" id="search" placeholder="Search by Title" oninput="searchProduct()">
+             <select id="category-filter" onchange="filterByCategory()">
+                 <option value="">All Categories</option>
+                 <option value="Electronics">Electronics</option>
+                 <option value="Clothing">Clothing</option>
+                 <option value="Furniture">Furniture</option>
+             </select>
+             <select id="sort" onchange="sortProducts()">
+                 <option value="asc">Sort by Price: Low to High</option>
+                 <option value="desc">Sort by Price: High to Low</option>
+             </select>
+         </div>
+ 
+         <!-- Product List -->
+         <div class="product-list">
+             <h3>Product List</h3>
+             <ul id="product-list"></ul>
+         </div>
+     </div>
+ 
+     <!-- <script src="script.js"></script> -->
+<script src="exam.js"></script>
+
+ </body>
+ </html>
+ 
